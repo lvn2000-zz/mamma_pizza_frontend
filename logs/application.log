@@ -1,0 +1,36 @@
+2018-11-13 22:40:42,417 [DEBUG] from play.api.libs.concurrent.ActorSystemProvider in play-dev-mode-akka.actor.default-dispatcher-9 - Starting application default Akka system: application
+2018-11-13 22:40:42,506 [DEBUG] from play.api.http.HttpConfiguration in play-dev-mode-akka.actor.default-dispatcher-9 - Generated dev mode secret 9aa88b07215a60f750fbcf93766851d0 for app at file:/home/lvn/prg/lvn_scala/mamapizza/portal-frontend/play-frontend/target/scala-2.12/classes/application.conf
+2018-11-13 22:40:43,038 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2018-11-13 22:40:43,048 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev)
+2018-11-13 22:40:43,409 [DEBUG] from application in scala-execution-context-global-162 - GET /
+2018-11-13 22:40:44,415 [DEBUG] from application in application-akka.actor.default-dispatcher-19 - Received response ItemResponse(Vector(
+  Item(
+    id = "15262150347200118311",
+    title = "pizza",
+    parent = None,
+    group = "05674788601858250802"
+  ), 
+  Item(
+    id = "15588735422734311674",
+    title = "ingredient",
+    parent = None,
+    group = "51010746536148271834"
+  ), 
+  Item(
+    id = "01256673658341257317",
+    title = "Test item",
+    parent = None,
+    group = "Test item group"
+  )
+))
+2018-11-13 22:40:48,811 [DEBUG] from application in scala-execution-context-global-162 - GET /admin/model/item/items
+2018-11-13 22:40:48,812 [DEBUG] from application in application-akka.actor.default-dispatcher-18 - Received request ItemRequest(Vector())
+2018-11-13 22:41:31,355 [DEBUG] from application in scala-execution-context-global-189 - GET /admin
+2018-11-13 22:41:33,842 [DEBUG] from application in scala-execution-context-global-191 - GET /admin/groups
+2018-11-13 22:41:35,793 [DEBUG] from application in scala-execution-context-global-189 - GET /admin/properties
+2018-11-13 22:41:37,190 [DEBUG] from application in scala-execution-context-global-191 - GET /admin

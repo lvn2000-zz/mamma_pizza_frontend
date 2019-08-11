@@ -1,0 +1,77 @@
+@(pizzas:Vector[AbstractPizzaListFrItem])(implicit assetsFinder: AssetsFinder)
+
+@import models.{AbstractPizzaListFrItem, PizzaListFrItem} 
+
+<!DOCTYPE html>
+<html lang="en">
+
+@header()
+
+<body>
+
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+
+		<a class="navbar-brand" href="/">Logo</a>
+
+		<ul class="navbar-nav">
+			<li class="nav-item active"><a class="nav-link" href="catalog">Pizza
+					catalog</a></li>
+			<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+			<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+			<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+	</nav>
+
+
+	<div class="text-center col-sm-12">
+		<div class="row content">
+
+			<div class="col-sm-12 text-center text-info">
+				<h1>Pizza catalog</h1>
+			</div>
+		</div>
+
+		@if(pizzas.isEmpty) {
+		<h1>Pizza Catalog is empty</h1>
+		} else { @for((pizza, index) <- pizzas.zipWithIndex) {
+		<div class="row content text-center col-sm-12">
+
+			<div class="card bg-info text-white">
+				<div class="card-header">Type:@pizza.catType Title:@pizza.title </div>
+ 				<div class="card-body">
+ 				  @pizza match {
+ 				  
+ 				  case pizzacat:PizzaListFrItem => {
+                    Ingredients: @pizzacat.ingredients.getOrElse("") <br/>
+                    PriceSizeM:  @pizzacat.priceSizeM.getOrElse("") <br/>
+                    PriceSizeL:  @pizzacat.priceSizeL.getOrElse("") <br/>
+                    PriceSizeXL: @pizzacat.priceSizeXL.getOrElse("") <br/>
+                    Spicy:       @pizzacat.spicy <br/>
+                    Vegan:       @pizzacat.vegan <br/>
+                    Meat:        @pizzacat.meat <br/>
+                    Fish:        @pizzacat.fish <br/>
+                   }
+
+ 				  case shortCatPizza:ShortListFrItem => {
+                    Price: @shortCatPizza.price.getOrElse("") <br/>
+				   }
+				   
+				  case _ => {
+				       Unknown type data	<br/>
+				   } 
+				   
+				  }
+				</div>
+				<div class="card-footer">Footer</div>
+			</div>
+		</div>
+
+		<br> } }
+
+	</div>
+	
+	@footer()
+
+</body>
+</html>

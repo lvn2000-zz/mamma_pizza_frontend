@@ -1,0 +1,61 @@
+@(title:String, assetsFinder: AssetsFinder)
+
+<!DOCTYPE html>
+<html lang="en">
+
+@header()
+
+<body>
+
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+     
+     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+		<a class="navbar-brand" href="/">Logo</a>
+
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="catalog">Pizza
+					catalog</a></li>
+			<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+			<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+			<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+	  </div>
+	  
+	  <div class="mx-auto order-0">
+        <a class="mx-auto" href="#">
+            <img src='@routes.Assets.at("images/pizza_img.jpg")' class="rounded-circle">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+        </ul>
+      </div>
+	  
+	</nav>
+    
+
+	<div class="text-center">
+		<div class="row content">
+
+			<div class="col-sm-12 text-center text-info">
+				<h1>Welcome</h1>
+				<p>Welcome text</p>
+			</div>
+		</div>
+	</div>
+
+	@footer()
+
+</body>
+</html>
+
+
+

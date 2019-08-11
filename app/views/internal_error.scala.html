@@ -1,0 +1,24 @@
+@* need_to_login Template File *@
+@(error:String)(implicit assetsFinder: AssetsFinder)
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+@header()
+
+<body>
+
+		<div class="row content">
+			<div class="col-sm-12 text-center text-error">
+				<h1>Internal error happened! Sorry :(!</h1>
+				</br>
+				<h1>@error</h1>
+			</div>
+		</div>
+
+
+	@footer()
+
+</body>
+</html>
